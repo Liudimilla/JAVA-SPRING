@@ -1,6 +1,7 @@
 package com.devsuperior.dslist.dto;
 
 import com.devsuperior.dslist.entities.Livro;
+import com.devsuperior.dslist.projections.LivroMinProjection;
 
 public class LivroMinDTO {
 
@@ -20,6 +21,14 @@ public class LivroMinDTO {
 		year = entity.getYear();
 		imgUrl = entity.getImgUrl();
 		shortDescription = entity.getShortDescription();
+	}
+	
+	public LivroMinDTO(LivroMinProjection projection) {
+		id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getLivroYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
 	}
 
 	public Long getId() {

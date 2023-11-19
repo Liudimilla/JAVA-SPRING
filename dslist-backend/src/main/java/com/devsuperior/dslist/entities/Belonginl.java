@@ -14,17 +14,7 @@ public class Belonginl {
 	private BelonginlPK id = new BelonginlPK();
 	
 	private Integer position;
-	
-	public Belonginl() {
 		
-	}
-
-	public Belonginl(Livro livro, LivroList list ,Integer position) {
-		id.setLivro(livro);
-		id.setList(list);
-		this.position = position;
-	}
-
 	public BelonginlPK getId() {
 		return id;
 	}
